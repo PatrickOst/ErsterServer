@@ -7,7 +7,7 @@ public class TestKlasse1Test {
     @org.junit.jupiter.api.Test
     void getmName() {
         assertTrue(true);
-        System.out.println("Test 1 durchgefuehrt Nr4");
+        System.out.println("Test 1 durchgefuehrt Nr5");
     }
 
 }
