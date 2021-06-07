@@ -6,7 +6,7 @@ public class TestKlasse1Test {
 
     @org.junit.jupiter.api.Test
     void getmName() {
-        assertTrue(true);
+        assertTrue(false);
         System.out.println("Test 1 durchgefuehrt");
     }
 
