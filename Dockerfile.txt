@@ -1,0 +1,3 @@
+FROM circleci/openjdk:8-jdk
+COPY ./build/libs/ErsterServer-1.0-SNAPSHOT.jar ErsterServer-1.0-SNAPSHOT.jar
+CMD ["java","-jar","ErsterServer-1.0-SNAPSHOT.jar"]

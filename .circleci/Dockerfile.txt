@@ -1,4 +1,0 @@
-FROM circleci/openjdk:8-jdk
-RUN apk --update add circleci/openjdk:8-jdk
-COPY docker-test-example.jar app.jar
-ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "app.jar"]

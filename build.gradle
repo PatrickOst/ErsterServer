@@ -1,9 +1,25 @@
-
-
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "gradle.plugin.com.palantir.gradle.docker:gradle-docker:0.22.1"
+    }
+}
 plugins {
+    id 'com.palantir.docker' version '0.22.1'
     id 'java'
     id 'application'
 }
+
+
+apply plugin: 'com.palantir.docker'
+
+version '0.1.0'
+
+
 
 application{
     mainClassName = 'FirstCICDServerPackage.Hauptklasse'
@@ -29,7 +45,7 @@ test {
 
 jar {
     manifest {
-        attributes "Main-Class": "FirstCICDServerPackage.Hauptklasse"
+        attributes "Main-Class": "FirstCICDServerPackage.Hauptklasse", 'Implementation-Title':'JarTitel'
     }
 
     from {
@@ -37,3 +53,6 @@ jar {
     }
 }
 
+docker {
+
+}
