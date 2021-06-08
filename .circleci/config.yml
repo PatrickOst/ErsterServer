@@ -42,7 +42,7 @@ jobs:
       - run:
           name: Build and push Docker image
           command:
-            docker build -t circleci/$IMAGE_NAME:$TAG .
+            docker build -t circleci/TestDocker .
             echo Buendtestrasse13 | docker login -u patrickost --password-stdin
-            docker push circleci/$IMAGE_NAME:$TAG
+            docker push circleci/TestDocker
 
