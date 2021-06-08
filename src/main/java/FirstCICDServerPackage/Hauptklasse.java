@@ -1,5 +1,7 @@
 package FirstCICDServerPackage;
 
+import FirstCICDServerPackage.config.Configuration;
+import FirstCICDServerPackage.config.ConfigurationManager;
 import com.sun.net.httpserver.*;
 
 import java.lang.System;
@@ -18,6 +20,10 @@ public class Hauptklasse {
         //Server implementation
         System.out.println("\nServer starting...");
         System.out.println("\n------------------------------");
+        ConfigurationManager.getInstance().loadConfigurationFile("src/main/resources/http.json");
+        Configuration conf = ConfigurationManager.getInstance().getCurrentConfiguration();
+        System.out.println("Using Port: " + conf.getPort());
+        System.out.println("Using WebRoot: " + conf.getWebroot());
 
     }
 }
