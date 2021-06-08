@@ -43,6 +43,6 @@ jobs:
           name: Build and push Docker image
           command:
             docker build -t circleci/TestDocker .
-            echo Buendtestrasse13 | docker login -u patrickost --password-stdin
+            echo Buendtestrasse13 | docker login -u patrickost Buendtestrasse13
             docker push circleci/TestDocker
 
